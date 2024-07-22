@@ -1,0 +1,453 @@
+/* Color Scheme Hexcodes
+Backgrounds: #D9D9D9
+Side/Nav Bar: #284b63
+Font: White/Black */
+
+:root {
+    --primary: #D9D9D9;
+    --secondary: #3C6E71;
+    --background: #353535;
+    --sidebar: #284b63;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'noto sans', sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding-left: 11%;
+    scrollbar-width: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Rowdies, sans-serif;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+h4 {
+    font-weight: 200;
+}
+
+/* Nav bar nonsense */
+
+.nav {    
+    background-color: var(--sidebar);
+    background-image: linear-gradient(90deg, var(--sidebar) 0%, var(--secondary) 100%);
+    display: flex;
+    height: 100px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    position: -webkit-sticky; /* for lame apple users */
+    z-index: 1000; /* nothing would go over my head. my reflexes are too fast. i would catch it */
+    top: 0;
+    transition-property: width;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav label {
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+input#menu {
+    display: none;
+}
+
+.nav_content {
+    display: flex;
+    flex-direction: row;
+    width: 0;
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--sidebar);
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.0s;
+}
+
+#home {
+    display: flex;
+}
+
+#menu:hover ~ .nav_content {
+    width: 50vh;
+}
+
+#menu:not(:hover) ~ .nav_content {
+    transition-delay: 5s;
+}
+
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 5px;
+    background: var(--sidebar);
+    color: white;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+
+/* hiding scroll bar in other browsers */
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    bottom: 0;
+}
+
+header img {
+    width: 40%;
+    height: auto;
+    padding-right: 25px;
+}
+
+img {
+    width: 10%;
+    height: auto;
+    padding-right: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+/* adjusting large links to avoid weirdness */
+#wyrmspan_review a, #flamecraft_review a, #social_links a, #skull_guide a, #munchkin_guide a{
+    color: black;
+    
+}
+
+/* styling for index page */
+
+#index_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+#index_content img {
+    width: 50%;
+    height: auto;
+}
+
+.articleone {
+    position: relative;
+    grid-column: 1; 
+    width: 100%;
+    margin: 1px;
+    border-radius: var(--border-radius);
+    border-color: var(--background);
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.articleone:hover {
+    border: 2px solid var(--secondary);
+}
+
+
+/* .articleone::after {
+    content: "";
+    display: block;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 64%, 1) 0%,
+      hsla(339, 100%, 55%, 1) 100%
+    );
+    height: 1500px;
+    width: 1500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   */
+  
+
+.articleone a {
+    position: relative;
+    grid-column: 1; 
+    width: 100%;
+    margin: 1px;
+    border-radius: var(--border-radius);
+    border-color: var(--background);
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    
+}
+
+.articletwo {
+    grid-column: 2;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.articletwo:hover {
+    border: 2px solid var(--secondary);
+}
+
+.articletwo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* rules for guides.html */
+
+#guides_content {
+    display: flex;
+    flex-direction: row;
+}
+
+#skull_guide {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding: 10px;
+}
+
+#skull_guide img {
+    width: 30%;
+    height: auto; 
+}
+
+#skull_guide:hover {
+    border: 2px solid var(--secondary);
+}
+
+
+#munchkin_guide {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding: 10px;
+}
+
+#munchkin_guide img {
+    width: 30%;
+    height: auto; 
+}
+
+#munchkin_guide:hover {
+    border: 2px solid var(--secondary);
+}
+
+/* rules for reviews.html */
+
+#review_content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#wyrmspan_review {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding: 10px;
+    width: 70vh;
+    height: auto;
+}
+
+#wyrmspan_review img {
+    width: 30%;
+    height: auto;
+}
+
+#wyrmspan_review:hover {
+    border: 2px solid var(--secondary);
+}
+
+#flamecraft_review {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding: 10px;
+    width: 70vh;
+    height: auto;
+}
+
+#flamecraft_review img {
+    width: 30%;
+    height: auto;
+}
+
+#flamecraft_review:hover {
+    border: 2px solid var(--secondary);
+}
+
+/* rules for about.html */
+#social_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#youtube {
+    width: 20vh;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid var(--secondary);
+    border-radius: var(--border-radius);
+}
+
+#twitter {
+    width: 20vh;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid var(--secondary);
+    border-radius: var(--border-radius);
+}
+
+#youtube a:hover {
+    i {
+        color: red;
+    }
+}
+
+#twitter a:hover {
+    i {
+        color: #55acee;
+    }
+}
+
+
+/* rules for individual guides */
+#main_content {
+    margin: 10px;
+    padding: 15px;
+    width: 90%;
+    border: 3px dashed var(--sidebar);
+}
+
+.border {
+    width: 200px;
+    margin-top: 10px;
+    border-bottom: 2px solid var(--sidebar);
+}
+
+/* sizing for sidebar images */
+#deadcells, #superbossmonster, #brink {
+    width: 50%;
+    height: auto;
+    
+}
+
+/* Sizing for mobile */
+
+@media (max-width: 750px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        order: 1
+    }
+
+    .nav { 
+        order: 2
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    main {
+        order: 4;
+    }
+
+    #footer {
+        order: 5;
+    }
+
+
+}
